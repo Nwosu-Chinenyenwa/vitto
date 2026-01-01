@@ -79,7 +79,7 @@ export default function Nav() {
                   </li>
                   <li>
                     <Link
-                      href="/Voting"
+                      href="/"
                       className="hover:text-[#001F3F] transition-colors"
                     >
                       Vote

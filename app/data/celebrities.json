@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Thalía",
+    "category": "Musician/Actress",
+    "image": "/images/thalia.jpg",
+    "description": "Famous Mexican singer and actress known for telenovelas."
+  },
+  {
+    "id": "2",
+    "name": "Luis Miguel",
+    "category": "Musician",
+    "image": "/images/luismiguel.jpg",
+    "description": "Iconic Mexican singer with a long career in Latin music."
+  },
+  {
+    "id": "3",
+    "name": "Salma Hayek",
+    "category": "Actress",
+    "image": "/images/salmahayek.jpg",
+    "description": "Mexican-American actress famous for Hollywood films."
+  },
+  {
+    "id": "4",
+    "name": "Chicharito Hernández",
+    "category": "Footballer",
+    "image": "/images/chicharito.jpg",
+    "description": "Mexican soccer star who played for Manchester United."
+  }
+]

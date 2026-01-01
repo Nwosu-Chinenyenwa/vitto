@@ -66,7 +66,7 @@ export default function Nav() {
                       href="/Entertainment"
                       className="hover:text-[#001F3F] transition-colors"
                     >
-                      Entertainment
+                      Farándula
                     </Link>
                   </li>
                   <li>
@@ -74,27 +74,27 @@ export default function Nav() {
                       href="/News"
                       className="hover:text-[#001F3F] transition-colors"
                     >
-                      News
+                      Noticias
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/Voting"
                       className="hover:text-[#001F3F] transition-colors"
                     >
-                      Vote
+                      Votar
                     </Link>
                   </li>
                 </ul>
               </div>
 
               <div className="flex items-center gap-4 lg:gap-6">
-                 <h2
-              onClick={() => setAuth(true)}
-              className="text-[18px] text-white cursor-pointer font-[400] border-r border-white py-3 px-5"
-            >
-              Login
-            </h2>
+                <h2
+                  onClick={() => setAuth(true)}
+                  className="text-[18px] text-white cursor-pointer font-[400] border-r border-white py-3 px-5"
+                >
+                  Iniciar Sesión
+                </h2>
 
                 <button
                   onClick={() => setSearch(!search)}
@@ -127,21 +127,21 @@ export default function Nav() {
                   className="block uppercase text-sm font-medium hover:text-[#001F3F] transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Entertainment
+                  Farándula
                 </Link>
                 <Link
                   href="/News"
                   className="block uppercase text-sm font-medium hover:text-[#001F3F] transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  News
+                  Noticias
                 </Link>
                 <Link
                   href="/Voting"
                   className="block uppercase text-sm font-medium hover:text-[#001F3F] transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Vote
+                  Votar
                 </Link>
                 <button
                   onClick={() => {
@@ -150,7 +150,7 @@ export default function Nav() {
                   }}
                   className="block w-full text-left py-2 text-sm font-normal hover:opacity-80"
                 >
-                  Login
+                  Iniciar Sesión
                 </button>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function Nav() {
               <input
                 autoFocus
                 type="text"
-                placeholder="Type and hit enter"
+                placeholder="Escribe y presiona enter"
                 className="w-full bg-[#f9f9f9] px-6 py-5 text-base placeholder:text-sm placeholder:font-medium outline-none"
               />
             </div>
@@ -175,7 +175,7 @@ export default function Nav() {
         <div className="shadow-sm flex justify-around items-center">
           <ul className="flex justify-around items-center">
             <li className="text-[#01579b] text-[12px] font-[600] uppercase w-[120px]">
-              Trending Now
+              Lo Más Viral
             </li>
             <li className="px-[10px] flex items-center py-3 mx-auto border-x border-[#dedede] text-center">
               <span className="text-[16px] text-[#c2c2c2]">
@@ -187,14 +187,15 @@ export default function Nav() {
             </li>
             <li>
               <h3 className="font-[500] px-8 text-[14px]">
-                Sorry, no trending stories at the moment
+                Por el momento no hay historias virales
               </h3>
             </li>
           </ul>
           <div></div>
         </div>
-          <div className="flex items-center justify-center px-5 py-5 md:px-0 md:pt-15 md:pb-10 cursor-not-allowed">
-            <Image src={banner} alt="banner" />
+
+        <div className="flex items-center justify-center px-5 py-5 md:px-0 md:pt-15 md:pb-10 cursor-not-allowed">
+          <Image src={banner} alt="banner" />
         </div>
       </nav>
 

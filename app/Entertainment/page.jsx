@@ -13,7 +13,7 @@ export default function page() {
 
   const tag = [
     { name: "Alan Walker" },
-    { name: " music " },
+    { name: " música " },
     { name: "Peder Elias" },
     { name: "Putri Ariani" },
   ];
@@ -53,32 +53,32 @@ export default function page() {
             {/* Story Categories */}
             <div>
               <h2 className="text-[14px] font-[400] border-b border-[#dedede] py-2 text-[#555555] mb-6 uppercase tracking-wider">
-                Story Categories
+                Categorías
               </h2>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-gray-600 text-sm font-semibold">1</span>
                   </div>
-                  <span className="text-[14px] text-[#000] font-medium">Entertainment</span>
+                  <span className="text-[14px] text-[#000] font-medium">Farándula</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-gray-600 text-sm font-semibold">2</span>
                   </div>
-                  <span className="text-[14px] text-[#000] font-medium">Politic</span>
+                  <span className="text-[14px] text-[#000] font-medium">Política</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-gray-600 text-sm font-semibold">3</span>
                   </div>
-                  <span className="text-[14px] text-[#000] font-medium">Sport</span>
+                  <span className="text-[14px] text-[#000] font-medium">Deportes</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-gray-600 text-sm font-semibold">4</span>
                   </div>
-                  <span className="text-[14px] text-[#000] font-medium">Technology</span>
+                  <span className="text-[14px] text-[#000] font-medium">Tecnología</span>
                 </li>
               </ul>
             </div>
@@ -86,7 +86,7 @@ export default function page() {
             {/* Popular Stories */}
             <div>
               <h2 className="text-[14px] font-[400] border-b border-[#dedede] py-2 text-[#555555] mb-6 uppercase tracking-wider">
-                Popular Stories
+                Historias Más Populares
               </h2>
 
               <div className="space-y-6">
@@ -106,7 +106,7 @@ export default function page() {
                   </div>
                   <div className="flex-1">
                     <p className="text-[14px] text-[#000] leading-tight">
-                      Kawhi Leonard, Paul George choose not to join but to...
+                      Kawhi Leonard, Paul George eligen no unirse sino...
                     </p>
                     <p className="text-sm text-[#aaa] mt-1 italic">youtube.com</p>
                   </div>
@@ -121,7 +121,7 @@ export default function page() {
                   />
                   <div className="flex-1">
                     <p className="text-[14px] text-[#000] leading-tight">
-                      Ethereum, Ripple And Litecoin Have Arrived on Bloomberg Terminals
+                      Ethereum, Ripple y Litecoin llegan a los terminales Bloomberg
                     </p>
                     <p className="text-sm text-[#aaa] mt-1 italic">coindesk.com</p>
                   </div>
@@ -135,7 +135,7 @@ export default function page() {
                   />
                   <div className="flex-1">
                     <p className="text-[14px] text-[#000] leading-tight">
-                      5 Must Read Money Books for Future Millionaires
+                      5 libros de dinero que todo futuro millonario debe leer
                     </p>
                     <p className="text-sm text-[#aaa] mt-1 italic">phroogal.com</p>
                   </div>
@@ -156,7 +156,7 @@ export default function page() {
                   </div>
                   <div className="flex-1">
                     <p className="text-[14px] text-[#000] leading-tight">
-                      The Olivier Giroud shooting drill which sums up his entire...
+                      El ejercicio de tiro de Olivier Giroud que resume toda su carrera...
                     </p>
                     <p className="text-sm text-[#aaa] mt-1 italic">mirror.co.uk</p>
                   </div>
@@ -192,7 +192,7 @@ export default function page() {
 
         {/* Tags */}
         <div className="flex flex-wrap items-center gap-x-2 gap-y-3 py-8">
-          <span className="text-[#656565] text-[14px] font-medium">Tags:</span>
+          <span className="text-[#656565] text-[14px] font-medium">Etiquetas:</span>
           <ul className="flex flex-wrap gap-2">
             {tag.map((item, index) => (
               <li
@@ -209,13 +209,13 @@ export default function page() {
         <div className="md:w-[70vw] w-full">
           <div className="w-full border-b border-[#e9ebee] flex flex-col sm:flex-row sm:justify-between text-[14px] pb-4 mb-6">
             <div className="mb-4 sm:mb-0">
-              <span className="text-[#1c1e21] font-[600]">0 comments</span>
+              <span className="text-[#1c1e21] font-[600]">0 comentarios</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>Sort by</span>
+              <span>Ordenar por</span>
               <select className="font-[500] border border-gray-300 rounded px-2 py-1">
-                <option>Newest</option>
-                <option>Oldest</option>
+                <option>Más recientes</option>
+                <option>Más antiguos</option>
               </select>
             </div>
           </div>
@@ -223,22 +223,22 @@ export default function page() {
           <div className="mb-8">
             <textarea
               className="outline-none w-full border border-[#e9ebee] p-3 rounded"
-              placeholder="Add a comment"
+              placeholder="Escribe un comentario"
               rows="4"
             ></textarea>
             <div className="w-full bg-[#f5f6f7] p-1 text-right border border-[#d3d6db] rounded-b">
               <button className="bg-[#9cb4d8] hover:bg-[#4267b2] transition-colors cursor-pointer text-[14px] text-white font-bold px-4 py-1 rounded">
-                Post
+                Publicar
               </button>
             </div>
           </div>
 
           <div>
             <h3 className="text-[#555555] text-[14px] font-[400] uppercase mb-4 border-b pb-2 border-[#dedede]">
-              Leave Your Comment
+              Deja tu Comentario
             </h3>
             <p className="text-[#888888] text-[15px] font-[400]">
-              You must be <span className="text-black font-medium">logged in</span> to post a comment.
+              Debes estar <span className="text-black font-medium">registrado</span> para comentar.
             </p>
           </div>
         </div>

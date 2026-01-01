@@ -12,7 +12,8 @@ import {
 
 const main = {
   backgroundColor: "#f6f9fc",
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  fontFamily:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
 };
 
 const container = {
@@ -39,7 +40,7 @@ const text = {
 
 const buttonContainer = { textAlign: "center", marginTop: "32px" };
 const button = {
-  backgroundColor: "#CC0000 ",
+  backgroundColor: "#CC0000",
   borderRadius: "4px",
   color: "#fff",
   display: "inline-block",
@@ -55,23 +56,33 @@ export default function WelcomeEmail({ name, email, dashboardUrl = "/" }) {
   return (
     <Html>
       <Head />
-      <Preview>Welcome to our platform!</Preview>
+      <Preview>¡Bienvenido a UpVote!</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Welcome, {displayName}!</Heading>
+          <Heading style={h1}>¡Bienvenido, {displayName}! 🇲🇽</Heading>
           <Text style={text}>
-            Thank you for signing up! We're thrilled to have you join our community.
+            ¡Gracias por registrarte! Estamos muy emocionados de tenerte en
+            nuestra comunidad.
           </Text>
           <Text style={text}>
-            You can now explore all features and start using the platform right away.
+            Ya puedes explorar todas las funciones y empezar a votar por tus
+            celebridades favoritas.
           </Text>
           <Section style={buttonContainer}>
             <Link style={button} href={dashboardUrl}>
-              Start voting
+              Empezar a Votar
             </Link>
           </Section>
-          <Text style={{ ...text, fontSize: "14px", color: "#888", marginTop: "40px" }}>
-            If you didn’t sign up, please ignore this email.
+          <Text
+            style={{
+              ...text,
+              fontSize: "14px",
+              color: "#888",
+              marginTop: "40px",
+            }}
+          >
+            Si no fuiste tú quien se registró, puedes ignorar este correo sin
+            problema.
           </Text>
         </Container>
       </Body>

@@ -48,7 +48,7 @@ export default function AuthModal({ onClose }) {
     try {
       if (isLogin) {
         await account.createEmailPasswordSession(email, password);
-        toast.success("Login successful!");
+        toast.success("¡Sesión iniciada con éxito!");
         onClose();
       } else {
         const user = await account.create(
@@ -65,11 +65,11 @@ export default function AuthModal({ onClose }) {
             name: username || "",
           }),
         });
-        toast.success("Account created! Welcome email sent.");
+        toast.success("¡Cuenta creada! Te enviamos un correo de bienvenida.");
         onClose();
       }
     } catch (err) {
-      setError(err.message || "Something went wrong.");
+      setError(err.message || "Algo salió mal.");
     } finally {
       setLoading(false);
     }
@@ -97,9 +97,9 @@ export default function AuthModal({ onClose }) {
         }),
       });
 
-      setSuccess("Reset link sent! Check your email.");
+      setSuccess("¡Listo! Revisa tu correo para el enlace de recuperación.");
     } catch (err) {
-      setError(err.message || "Failed to send reset link.");
+      setError(err.message || "No pudimos enviar el enlace de recuperación.");
     } finally {
       setLoading(false);
     }
@@ -113,13 +113,13 @@ export default function AuthModal({ onClose }) {
 
     try {
       await account.updateRecovery(userId, secret, newPassword, newPassword);
-      setSuccess("Password updated! You can now log in.");
+      setSuccess("¡Contraseña actualizada! Ya puedes iniciar sesión.");
       setTimeout(() => {
         setMode("auth");
         setIsLogin(true);
       }, 2000);
     } catch (err) {
-      setError(err.message || "Invalid or expired link.");
+      setError(err.message || "El enlace es inválido o ya expiró.");
     } finally {
       setLoading(false);
     }
@@ -140,25 +140,25 @@ export default function AuthModal({ onClose }) {
                   onClick={() => setIsLogin(true)}
                   className={`flex-1 py-3 text-white font-bold text-[16px] transition-colors cursor-pointer ${isLogin ? "bg-[#0277bd]" : "bg-[#cccccc]"}`}
                 >
-                  Login
+                  Iniciar Sesión
                 </button>
                 <button
                   onClick={() => setIsLogin(false)}
                   className={`flex-1 py-3 text-black font-bold text-lg transition-colors cursor-pointer ${!isLogin ? "bg-[#0277bd] text-white" : "bg-[#e0e0e0]"}`}
                 >
-                  Register
+                  Registrarse
                 </button>
               </div>
 
               <div className="p-6">
                 <h2 className="text-2xl font-[400] uppercase text-[#555555] text-[14px] mb-6 border-b-1 border-[#dedede] pb-2">
-                  {isLogin ? "Login" : "Register"}
+                  {isLogin ? "Iniciar Sesión" : "Crear Cuenta"}
                 </h2>
 
                 <form className="space-y-6" onSubmit={handleAuthSubmit}>
                   <div>
                     <label className="block text-[#888888] font-medium mb-1">
-                      Email
+                      Correo Electrónico
                     </label>
                     <input
                       type="email"
@@ -168,14 +168,14 @@ export default function AuthModal({ onClose }) {
                       required
                     />
                     <p className="text-xs text-[#888888] mt-2">
-                      Use a valid email address.
+                      Usa un correo válido.
                     </p>
                   </div>
 
                   {!isLogin && (
                     <div>
                       <label className="block text-[#888888] font-medium mb-1">
-                        Username 
+                        Nombre de Usuario
                       </label>
                       <input
                         type="text"
@@ -189,7 +189,7 @@ export default function AuthModal({ onClose }) {
 
                   <div>
                     <label className="block text-[#888888] font-medium mb-1">
-                      Password
+                      Contraseña
                     </label>
                     <input
                       type="password"
@@ -199,7 +199,7 @@ export default function AuthModal({ onClose }) {
                       required
                     />
                     <p className="text-xs text-[#888888] mt-2">
-                      At least 8 characters, not common.
+                      Mínimo 8 caracteres, no uses una común.
                     </p>
                   </div>
 
@@ -210,7 +210,7 @@ export default function AuthModal({ onClose }) {
                     disabled={loading}
                     className={`py-[15px] px-[30px] text-white font-[400] text-[14px] cursor-pointer transition-colors ${loading ? "bg-gray-400" : "bg-[#00bcd4]"}`}
                   >
-                    {loading ? "Loading..." : isLogin ? "Log In" : "Sign Up"}
+                    {loading ? "Cargando..." : isLogin ? "Entrar" : "Registrarme"}
                   </button>
                 </form>
 
@@ -222,7 +222,7 @@ export default function AuthModal({ onClose }) {
                       onClick={() => setMode("forgot")}
                       className="hover:underline text-[#0277bd]"
                     >
-                      Lost Password
+                      ¿Olvidaste tu contraseña?
                     </button>
                   </div>
                 )}
@@ -233,12 +233,12 @@ export default function AuthModal({ onClose }) {
           {mode === "forgot" && (
             <div className="p-6">
               <h2 className="text-2xl font-[400] uppercase text-[#555555] text-[14px] mb-6 border-b-1 border-[#dedede] pb-2">
-                Reset Password
+                Recuperar Contraseña
               </h2>
               <form className="space-y-6" onSubmit={handleForgotSubmit}>
                 <div>
                   <label className="block text-[#888888] font-medium mb-1">
-                    Email
+                    Correo Electrónico
                   </label>
                   <input
                     type="email"
@@ -248,7 +248,7 @@ export default function AuthModal({ onClose }) {
                     required
                   />
                   <p className="text-xs text-[#888888] mt-2">
-                    We'll send a secure reset link.
+                    Te enviaremos un enlace seguro para recuperar tu cuenta.
                   </p>
                 </div>
                 {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -258,14 +258,14 @@ export default function AuthModal({ onClose }) {
                   disabled={loading}
                   className={`py-[15px] px-[30px] text-white font-[400] text-[14px] cursor-pointer transition-colors ${loading ? "bg-gray-400" : "bg-[#00bcd4]"}`}
                 >
-                  {loading ? "Sending..." : "Send Reset Link"}
+                  {loading ? "Enviando..." : "Enviar Enlace"}
                 </button>
                 <button
                   type="button"
                   onClick={() => setMode("auth")}
                   className="block mt-4 text-sm text-[#0277bd] hover:underline"
                 >
-                  Back to Login
+                  Regresar al Inicio de Sesión
                 </button>
               </form>
             </div>
@@ -274,12 +274,12 @@ export default function AuthModal({ onClose }) {
           {mode === "reset" && (
             <div className="p-6">
               <h2 className="text-2xl font-[400] uppercase text-[#555555] text-[14px] mb-6 border-b-1 border-[#dedede] pb-2">
-                Set New Password
+                Establecer Nueva Contraseña
               </h2>
               <form className="space-y-6" onSubmit={handleResetSubmit}>
                 <div>
                   <label className="block text-[#888888] font-medium mb-1">
-                    New Password
+                    Nueva Contraseña
                   </label>
                   <input
                     type="password"
@@ -289,7 +289,7 @@ export default function AuthModal({ onClose }) {
                     required
                   />
                   <p className="text-xs text-[#888888] mt-2">
-                    At least 8 characters.
+                    Mínimo 8 caracteres.
                   </p>
                 </div>
                 {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -299,7 +299,7 @@ export default function AuthModal({ onClose }) {
                   disabled={loading}
                   className={`py-[15px] px-[30px] text-white font-[400] text-[14px] cursor-pointer transition-colors ${loading ? "bg-gray-400" : "bg-[#00bcd4]"}`}
                 >
-                  {loading ? "Saving..." : "Update Password"}
+                  {loading ? "Guardando..." : "Cambiar Contraseña"}
                 </button>
               </form>
             </div>

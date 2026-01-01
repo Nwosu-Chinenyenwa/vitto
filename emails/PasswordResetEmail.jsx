@@ -39,7 +39,7 @@ const text = {
 
 const buttonContainer = { textAlign: "center", marginTop: "32px" };
 const button = {
-  backgroundColor: "#CC0000 ",
+  backgroundColor: "#CC0000",
   borderRadius: "4px",
   color: "#fff",
   display: "inline-block",
@@ -55,26 +55,26 @@ export default function PasswordResetEmail({ name, email, resetUrl }) {
   return (
     <Html>
       <Head />
-      <Preview>Reset your password</Preview>
+      <Preview>Recupera tu contraseña</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Password Reset Request</Heading>
+          <Heading style={h1}>Solicitud para recuperar contraseña</Heading>
           <Text style={text}>
-            Hi {displayName},
+            ¡Hola {displayName}!
           </Text>
           <Text style={text}>
-            We received a request to reset your password. Click the button below to set a new one.
+            Recibimos una solicitud para cambiar la contraseña de tu cuenta. Haz clic en el botón de abajo para establecer una nueva.
           </Text>
           <Text style={text}>
-            This link will expire in 1 hour for security reasons.
+            Este enlace expirará en 1 hora por razones de seguridad.
           </Text>
           <Section style={buttonContainer}>
             <Link style={button} href={resetUrl}>
-              Reset Password
+              Cambiar Contraseña
             </Link>
           </Section>
           <Text style={{ ...text, fontSize: "14px", color: "#888", marginTop: "40px" }}>
-            If you didn’t request this, you can safely ignore this email.
+            Si no solicitaste este cambio, puedes ignorar este correo con toda tranquilidad.
           </Text>
         </Container>
       </Body>
